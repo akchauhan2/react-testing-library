@@ -1,18 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Banner from './components/Banner/Banner';
-import { Switch, Route } from "react-router-dom"
-import TodoPage from './pages/TodoPage/TodoPage';
-import FollowersPage from './pages/FollowersPage/FollowersPage';
+import React from "react";
 
+import Login from "./Login";
+import Sum from "./Sum";
+import "./App.css";
 function App() {
   return (
-    <div className="App">
-      <Banner />
-      <Switch>
-        <Route strict exact path="/" component={TodoPage}/>
-        <Route strict exact path="/followers" component={FollowersPage}/>
-      </Switch>
+    <div>
+      <Login />
+      <h1 data-testid="title">Auth app</h1>
+      <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+      </ul>
+      <Sum />
     </div>
   );
 }
